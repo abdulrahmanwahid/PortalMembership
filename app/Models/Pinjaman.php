@@ -10,4 +10,14 @@ class Pinjaman extends Model
     use HasFactory;
 
     protected $table = 'pinjamans';
+
+    protected $fillable =
+    [
+        'nomor',
+        'jenis_pinjaman',
+        'awal_angsuran',
+        'akhir_angsuran',
+        'nominal_pengajuan',
+        'nominal_disetujui'
+    ];
 }
