@@ -24,7 +24,8 @@
                                         Transaksi
                                     </div>
                                     <hr style="border: 0.5px solid rgba(255, 255, 255, 0.5); margin: 0.5rem 0;">
-                                    <div class="h5 mb-0 font-weight-bold text-white">Rp. 784,000</div>
+                                    <div class="h5 mb-0 font-weight-bold text-white">Rp.
+                                        {{ number_format($total_Transaksi) }}</div>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +45,8 @@
                                         Simpanan
                                     </div>
                                     <hr style="border: 0.5px solid rgba(255, 255, 255, 0.5); margin: 0.5rem 0;">
-                                    <div class="h5 mb-0 font-weight-bold text-white">Rp. 35,800,000</div>
+                                    <div class="h5 mb-0 font-weight-bold text-white">Rp.
+                                        {{ number_format($total_Simpanan) }}</div>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +66,8 @@
                                         PINJAMAN
                                     </div>
                                     <hr style="border: 0.5px solid rgba(255, 255, 255, 0.5); margin: 0.5rem 0;">
-                                    <div class="h5 mb-0 font-weight-bold text-white">Rp. 50,000</div>
+                                    <div class="h5 mb-0 font-weight-bold text-white">Rp.
+                                        {{ number_format($total_Pinjaman) }}</div>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +87,8 @@
                                         Tabungan Qurban
                                     </div>
                                     <hr style="border: 0.5px solid rgba(255, 255, 255, 0.5); margin: 0.5rem 0;">
-                                    <div class="h5 mb-0 font-weight-bold text-white">Rp. 2,600,000</div>
+                                    <div class="h5 mb-0 font-weight-bold text-white">
+                                        Rp.{{ number_format($total_Tabungan) }}</div>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +172,7 @@
                                                 <td>{{ $item->tanggal }}</td>
                                                 <td>{{ $item->pos }}</td>
                                                 <td>{{ $item->payment }}</td>
-                                                <td>{{ number_format($item->nominal, 0, ',', '.') }}</td>
+                                                <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -220,10 +224,10 @@
                                                 <td>{{ $key + 1 }}</td>
                                                 <td>{{ $item->nomor }}</td>
                                                 <td>{{ $item->jenis_simpanan }}</td>
-                                                <td>{{ number_format($item->awal_angsuran, 0, ',', '.') }}</td>
-                                                <td>{{ number_format($item->akhir_angsuran, 0, ',', '.') }}</td>
-                                                <td>{{ number_format($item->nominal_pengajuan, 0, ',', '.') }}</td>
-                                                <td>{{ number_format($item->nominal_disetujui, 0, ',', '.') }}</td>
+                                                <td>Rp. {{ number_format($item->awal_angsuran, 0, ',', '.') }}</td>
+                                                <td>Rp. {{ number_format($item->akhir_angsuran, 0, ',', '.') }}</td>
+                                                <td>Rp. {{ number_format($item->nominal_pengajuan, 0, ',', '.') }}</td>
+                                                <td>Rp. {{ number_format($item->nominal_disetujui, 0, ',', '.') }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -275,10 +279,10 @@
                                                 <td>{{ $key + 1 }}</td>
                                                 <td>{{ $item->nomor }}</td>
                                                 <td>{{ $item->jenis_pinjaman }}</td>
-                                                <td>{{ number_format($item->awal_angsuran, 0, ',', '.') }}</td>
-                                                <td>{{ number_format($item->akhir_angsuran, 0, ',', '.') }}</td>
-                                                <td>{{ number_format($item->nominal_pengajuan, 0, ',', '.') }}</td>
-                                                <td>{{ number_format($item->nominal_disetujui, 0, ',', '.') }}</td>
+                                                <td>Rp. {{ number_format($item->awal_angsuran, 0, ',', '.') }}</td>
+                                                <td>Rp. {{ number_format($item->akhir_angsuran, 0, ',', '.') }}</td>
+                                                <td>Rp. {{ number_format($item->nominal_pengajuan, 0, ',', '.') }}</td>
+                                                <td>Rp. {{ number_format($item->nominal_disetujui, 0, ',', '.') }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -333,7 +337,7 @@
                                                 <td>{{ $item->nama }}</td>
                                                 <td>{{ $item->perusahaan }}</td>
                                                 <td>{{ $item->tanggal }}</td>
-                                                <td>{{ number_format($item->nominal, 0, ',', '.') }}</td>
+                                                <td>Rp. {{ number_format($item->nominal, 0, ',', '.') }}</td>
                                                 <td>{{ $item->jangka_waktu }}</td>
                                                 <td>{{ $item->status }}</td>
                                             </tr>

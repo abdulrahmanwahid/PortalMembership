@@ -14,6 +14,11 @@ class DashboardController extends Controller
 
     public function index()
     {
+        $data['total_Simpanan'] = Simpanan::sum('awal_angsuran');
+        $data['total_Pinjaman'] = Pinjaman::sum('nominal_disetujui');
+        $data['total_Tabungan'] = TabunganQurban::sum('nominal');
+        $data['total_Transaksi'] = Transaksi::sum('nominal');
+
         $data['transaksi'] = Transaksi::all();
         $data['pinjaman'] = Pinjaman::all();
         $data['simpanan'] = Simpanan::all();
