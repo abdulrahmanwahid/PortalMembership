@@ -28,12 +28,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a more polished look */
             border: 3px solid rgba(106, 103, 103, 0.2);
         }
-    
+
         /* Override the gradient class to ensure the background is white */
         .navbar-nav.bg-gradient-danger.sidebar {
             background: transparent; /* Remove the gradient background */
         }
-    
+
         /* Sidebar brand */
         .sidebar-brand {
             display: flex;
@@ -48,7 +48,7 @@
         .sidebar-brand-text {
             font-size: 0.75rem; /* Ukuran teks yang lebih kecil */
             color: #000; /* Warna teks */
-        }    
+        }
 
         /* Sidebar links */
         .nav-item {
@@ -73,26 +73,26 @@
             background-color: #e9ecef; /* Background for active link */
             color: #000 !important;
         }
-    
+
         /* Sidebar headings */
         .sidebar-heading {
             font-size: 0.75rem;
             text-transform: uppercase;
             color: #000 !important; /* Ensures heading color */
         }
-    
+
         /* Collapse menu */
         .collapse-inner .collapse-header,
         .collapse-item {
             color: #000 !important; /* Text color for collapse items */
         }
-        
+
         /* Divider */
         .sidebar-divider {
             border-top: 1px solid #dee2e6;
             margin: 1rem 0;
         }
-    
+
         /* Responsive adjustments */
         @media (max-width: 767.98px) {
             .navbar-nav.sidebar {
@@ -117,7 +117,7 @@
                     <img src="{{ asset('img/kanitra2.png') }}" alt="Logo" class="logo" style="width: 175px; height: auto;">
                 </div>
             </a>
-            
+
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
             <!-- Garis horizontal yang lebih jelas -->
@@ -141,7 +141,7 @@
 
             <!-- Nav Item - Utilities -->
             <li class="nav-item">
-                <a class="nav-link" href="utilities.html" style="color: rgba(0, 0, 139, 0.7); font-weight: bold;">
+                <a class="nav-link" href="{{route('simpanan.index')}}" style="color: rgba(0, 0, 139, 0.7); font-weight: bold;">
                     <img src="{{ asset('img/simpanan.png') }}" alt="Simpanan Icon" style="height: 20px; width: 20px; margin-right: 8px;">
                     <span>Simpanan</span>
                 </a>
@@ -149,7 +149,7 @@
 
             <!-- Nav Item - Pages -->
             <li class="nav-item">
-                <a class="nav-link" href="pages.html" style="color: rgba(0, 0, 139, 0.7); font-weight: bold;">
+                <a class="nav-link" href="{{route('pinjaman.index')}}" style="color: rgba(0, 0, 139, 0.7); font-weight: bold;">
                     <img src="{{ asset('img/pinjaman.png') }}" alt="Pinjaman Icon" style="height: 20px; width: 20px; margin-right: 8px;">
                     <span>Pinjaman</span>
                 </a>
@@ -157,20 +157,20 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html" style="color: rgba(0, 0, 139, 0.7); font-weight: bold;">
+                <a class="nav-link" href="{{route('tabungan.index')}}" style="color: rgba(0, 0, 139, 0.7); font-weight: bold;">
                     <img src="{{ asset('img/tabungan.png') }}" alt="Tabungan Qurban Icon" style="height: 20px; width: 20px; margin-right: 8px;">
                     <span>Tabungan Qurban</span>
                 </a>
             </li>
-                
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-        
+
             <!-- Additional sections can be added here -->
         </ul>
-        
 
-        
+
+
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">

@@ -5,16 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Transaksi extends Model
+class TabunganQurban extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'id',
-        'label',
+    protected $fillable =
+    [
+        'nrp',
+        'nama',
+        'perusahaan',
         'tanggal',
-        'pos',
-        'payment',
         'nominal',
+        'jangka_waktu',
+        'status',
+        'total_nominal',
     ];
-
 }
